@@ -149,3 +149,10 @@ body{
     width: 90%;
   }
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
