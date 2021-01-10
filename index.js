@@ -31,16 +31,13 @@ function addDataToFirestore(){
         phone: userData[2],
         email: userData[3],
         address: userData[4],
-        essentialWorker: userData[5],
-        dailyContact: userData[6],
-        age: userData[7],
-        heartLung: userData[8],
-        diabetes: userData[9],
-        immunocompromised: userData[10],
-        vulnerableGroup: userData[11],
-        covid: userData[12],
-        pregnant: userData[13],
-        postal: userData[14],
+        wwcv: userData[5],
+        ess: userData[6],
+        vulnerableGroup: userData[7],
+        age: userData[8],
+        sc: userData[9],
+        fn: userData[10],
+        covid: userData[11],
         time: Date.now()/1000
     }).then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
