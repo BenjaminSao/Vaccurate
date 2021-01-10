@@ -139,14 +139,76 @@ body{
 
 }
 
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
 .newcol{
   width: 50%;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #FFA4A4;
+  border-radius: 50%;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFA4A4;
 }
 
 /* //mobile changes */
 @media (min-width: 0px) and (max-width: 768px) {
   .newcol{
     width: 90%;
+  }
+  .container {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: #FFA4A4;
+    border-radius: 50%;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+   	top: 4px;
+  	left: 4px;
+  	width: 6px;
+  	height: 6px;
+  	border-radius: 50%;
+  	background: #FFA4A4;
   }
 }
 
@@ -155,4 +217,35 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #9B0000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
 }

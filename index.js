@@ -1,7 +1,7 @@
 var db = firebase.firestore();
 var userData = []; // Data about the user
-var userPrompt = ["First Name", "Last Name", "Phone", "Email", "Address", "Are you an Essential Worker?", "Do you live with/come into daily contact with vulnerable persons> (Y/N)",
-"Age", "Do/Did you have any form of heart/lung disease? (Y/N)", "Do/Did you have any form of diabetes? (Y/N)", "Are you immunocompromised? (Y/N)", "Are you apart of Vulnerable Groups (i.e. first nations, ...)? (Y/N)",
+var userPrompt = ["First Name", "Last Name", "Phone", "Email", "Address", "Are a Health-care Worker at risk for exposure?", "Do you live with/come into daily contact with vulnerable persons (Y/N)",
+"Age", "Do/Did you have any form of heart/lung disease? (Y/N)", "Do/Did you have any form of diabetes? (Y/N)", "Are you immunocompromised? (Y/N)", "Are you part of Vulnerable Groups (i.e. first nations, ...)? (Y/N)",
 "Have you ever had/have COVID-19? (Y/N)", "Are you pregnant? (Y/N)", "Please provide your postal code", "Submit"] // Prompt Questions
 var currQuestion = 0; // Current question the user is on
 

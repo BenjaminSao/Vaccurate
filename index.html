@@ -64,8 +64,65 @@
           <!-- question -->
           <p class="question" id="prompt">What's your name? *</p>
           <div class="spacer"></div>
+
+          <!-- type style -->
           <input placeholder="Type your name here"type="text" id="input" class="entertext"><br><br>
-          <div class="spacer"></div>
+
+          <!-- regular yes/no -->
+          <div class="newcol justify-content-start">
+            <label class="container">No
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+          </div>
+
+          <!-- chronic condition -->
+          <div class="newcol justify-content-start">
+            <label class="container">No
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes, I have a serious condition
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes, I have a moderate condition
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+          </div>
+
+          <!-- health care -->
+          <div class="newcol justify-content-start">
+            <label class="container">No
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes, I work directly with COVID-19 patients
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes, I work indirectly with COVID-19 patients
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Yes, I rarely/don't work with COVID-19 patients
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+              <div class="spacer"></div>
+            </label>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+          </div>
+
           <!-- next button -->
           <button type="button" class="nextbox" onclick="nextQuestion();">NEXT</button>
           <!-- back button -->
