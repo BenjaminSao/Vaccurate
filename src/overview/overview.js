@@ -8,11 +8,10 @@ var doses;
 
 clinicsRef.get().then(function(doc) {
     if (doc.exists) {
-        var list = document.createElement('ul');
         this.doses = doc.data().doses;
         usersRef.orderBy("score", "desc").limit(this.doses).get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
-                console.log(doc.data());
+                var list = document.createElement('ul');
                 var score = document.createElement('li');
                 score.appendChild(document.createTextNode("score: " + doc.data().score));
                 list.appendChild(score);
@@ -25,9 +24,9 @@ clinicsRef.get().then(function(doc) {
                 var email = document.createElement('li');
                 email.appendChild(document.createTextNode("email: " + doc.data().email));
                 list.appendChild(email);
+                document.getElementById("list").appendChild(list);
             });
         });
-        document.getElementById("list").appendChild(list);
     } else {
         console.log("No such document!");
     }
