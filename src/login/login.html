@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clinic Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="container-fluid background" style="height: 100vh;">
+    <img src="../../assets/cornericon.png" class="icon" onclick="window.location.href='../../home.html'">
     <!-- Firebase Setup -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
@@ -37,12 +44,24 @@
     </script>
     <!-- Firebase Setup -->
     
-    <label>email</label>
-    <input type="text" id="email">
-    <label>pass</label>
-    <input type="password" id="pass">
-    <button onclick="onSubmit();">Login</button>
 
+    <div class="row d-flex justify-content-center" style="height:100vh">
+        <div class="newcol align-self-center">
+            <h1 class="title">CLINIC LOGIN</h1>
+            <div class="spacer"></div>
+            <label>EMAIL</label>
+            <div class="spacer"></div>
+            <input type="text" id="email" placeholder="you@clinic.com" class="input">
+            <div class="spacer"></div>
+            <label>PASSWORD</label>
+            <div class="spacer"></div>
+            <input type="password" id="pass" placeholder="•••••••••" class="input">
+            <div class="spacer"></div>
+            <button class="buttons" id="login" onclick="onSubmit();">LOGIN</button>
+        </div>
+    </div>
+    
+    <p class="note">Vaccurate | 2021 nwHacks</p>
     <script src="login.js"></script>
 </body>
 </html>
