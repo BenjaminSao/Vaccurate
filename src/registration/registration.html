@@ -14,6 +14,9 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
     <script>
     // Your web app's Firebase configuration
@@ -37,13 +40,20 @@
     <h1>
         Register
     </h1>
-
+    <label>name</label>
     <input type="text" id="cname">
+    <label>location</label>
     <input type="text" id="clocation">
+    <label>email</label>
     <input type="text" id="email">
+    <label>phone</label>
     <input type="text" id="phone">
+    <label>doses</label>
     <input type="text" id="doses">
-    <input type="text" id="pass">
+    <label>password</label>
+    <input type="password" id="pass">
     <button onclick="onSubmit();">Submit</button>
+
+    <script src="registration.js"></script>
 </body>
 </html>
