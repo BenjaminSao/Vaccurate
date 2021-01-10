@@ -22,3 +22,4 @@ For now, Vaccurate uses a simple, weighted scoring system in our Java based serv
 
 |Question|Weight|
 |---|---|
+|Age: 0-17|0.6|
