@@ -1,27 +1,26 @@
-const accountSid = "ACa48b44de088eb88ece5e55f9a4fbc17c";
-const authToken = "e6eba779e86874b6246859222358f4cd"
+const config = require('./config');
 
 const http = require("http")
 const express = require("express")
 const MessagingResponse = require("twilio").twiml.MessagingResponse
 const bodyParser = require('body-parser');
-const client = require("twilio")(accountSid, authToken)
+const client = require("twilio")(config.accountSid, config.authToken)
 
+const message = "\nYour COVID-19 vaccination dates have been confirmed:" +
+"\n\nYOURNAME\nFirst Dose: FIRSTDATE\nSecond Dose: SECONDDATE\nClinic Location: LOCATION" +
+"\n\nAre you able to attend both vaccination sessions? " +
+"Reply YES to confirm your attendence, or register again at Vaccurate www.something.com to modify your appointments."
  
 client.messages.create({
-    to: "+14034623775",
-    from: "+12248885065",
-    body: "say YES"
-    // body: "\nYour COVID-19 vaccination dates have been confirmed:" +
-    // "\n\nYOURNAME\nFirst Dose: FIRSTDATE\nSecond Dose: SECONDDATE\nClinic Location: LOCATION" +
-    // "\n\nAre you able to attend both vaccination sessions? " +
-    // "Reply YES to confirm your attendence, or login to the Vaccurate dashboard www.google.com to modify your appointments."
+    to: config.phoneNumber1,
+    from: config.twilioNumber,
+    body: message
 })
 
 client.messages.create({
-    to: "+15878899728",
-    from: "+12248885065",
-    body: "say YES"
+    to: config.phoneNumber2,
+    from: config.twilioNumber,
+    body: message
 })
 
 

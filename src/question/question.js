@@ -1,8 +1,8 @@
 var db = firebase.firestore();
 var userData = []; // Data about the user
-var userPrompt = ["First Name", "Last Name", "Phone", "Email", "Address", "Are you an Essential Worker?", "Do you live with/come into daily contact with vulnerable persons> (Y/N)",
-"Age", "Do/Did you have any form of heart/lung disease? (Y/N)", "Do/Did you have any form of diabetes? (Y/N)", "Are you immunocompromised? (Y/N)", "Are you apart of Vulnerable Groups (i.e. first nations, ...)? (Y/N)",
-"Have you ever had/have COVID-19? (Y/N)", "Are you pregnant? (Y/N)", "Please provide your postal code", "Submit"] // Prompt Questions
+var userPrompt = ["First Name", "Last Name", "Phone", "Email", "Address", "Are you an healthcare worker? (y/n)", "Are you an essential worker (y/n)",
+"Are you apart of a vulnerable group? (y/n)", "How old are you?", "Do you have any serious chronic illness? (y/n)", "Are you a part of the minority? (i.e. first nation) (y/n)",
+"Have you ever had/have COVID-19? (Y/N)", "Submit"] // Prompt Questions
 var currQuestion = 0; // Current question the user is on
 
 function nextQuestion(){
@@ -23,17 +23,14 @@ function addDataToFirestore(){
         phone: userData[2],
         email: userData[3],
         address: userData[4],
-        essentialWorker: userData[5],
-        dailyContact: userData[6],
-        age: userData[7],
-        heartLung: userData[8],
-        diabetes: userData[9],
-        immunocompromised: userData[10],
-        vulnerableGroup: userData[11],
-        covid: userData[12],
-        pregnant: userData[13],
-        postal: userData[14],
-        time: Date.now()
+        wwcv: userData[5],
+        ess: userData[6],
+        vulnerableGroup: userData[7],
+        age: userData[8],
+        sc: userData[9],
+        fn: userData[10],
+        covid: userData[11],
+        time: Date.now()/1000
     }).then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
     })

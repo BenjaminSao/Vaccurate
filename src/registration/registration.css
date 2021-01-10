@@ -1,0 +1,148 @@
+body{
+    background-image: url("../../assets/background.png");
+    background-position: center bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #FF5959;
+  }
+
+  .bg{
+    background-color: #FF5959;
+  }
+
+.title {
+    padding-bottom: 0px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    /* identical to box height */
+    text-align: center;
+
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.buttons {
+    width: 120px;
+    height: 45px;
+
+    border: 3px solid;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: 0%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    transition-duration: 300ms;
+}
+
+.buttons:hover {
+    transition-duration: 200ms;
+}
+
+#register {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+#register:hover {
+    background-color: #FFFFFF;
+    color: red;
+    border-color: #ffffff;
+}
+
+.test{
+  border: 3px solid transparent;
+}
+
+.spacer{
+    height: 20px;
+}
+
+.spacerxl{
+  height: 100px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.icon {
+    position: absolute;
+    height: 34px;
+    width: 100px;
+    top: 24px;
+    left: 24px;
+}
+
+.note{
+    position: fixed;
+    bottom: 12px;
+    left: 24px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+label {
+    margin: 10px 0px -30px 51.5px;
+    /* margin-left: 51.5px;
+    margin-bottom: -30px; */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+input:focus {
+    outline: none;
+}
+
+.newcol{
+  width: 80%;
+}
+
+.input {
+    margin-left: 50px;
+    margin-bottom: 25px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid black;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.1em;
+}
+
+/* //mobile changes */
+@media (min-width: 0px) and (max-width: 768px) {
+  .title {
+      font-size: 42px;
+  }
+  .newcol{
+    width: 90%;
+  }
+}

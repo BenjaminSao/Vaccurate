@@ -59,21 +59,26 @@
         <div class="newcol align-self-center">
 
           <!-- question counter -->
-          <p class="counter" id="counter">1/15</p>
+          <p class="counter" id="counter">1/12</p>
           <div class="spacer"></div>
           <!-- question -->
-          <p class="question" id="prompt">What's your name? *</p>
+          <p class="question" id="prompt">What's your first name?</p>
           <div class="spacer"></div>
-          <input placeholder="Type your name here"type="text" id="input" class="entertext"><br><br>
-          <div class="spacer"></div>
+
+          <!-- type style -->
+          <input required placeholder="Type your response here"type="text" id="input" class="entertext"><br><br>
+
+          
+
           <!-- next button -->
-          <button type="button" class="nextbox" onclick="nextQuestion();">NEXT</button>
+          <button type="submit" class="nextbox" onclick="nextQuestion();" id="next">NEXT</button>
+          <p id="message"></p>
           <!-- back button -->
           <button type="button" class="backbox"><img src="Assets/arrow.png" class="backboximg"></button>
 
 
         </div>
-        <p class="note">Vaccurate | 2020 nwHacks</p>
+        <p class="note">Vaccurate | 2021 nwHacks</p>
       </div>
     </div>
     <script src="index.js"></script>
