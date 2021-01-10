@@ -1,8 +1,8 @@
 var db = firebase.firestore();
 var userData = []; // Data about the user
-var userPrompt = ["First Name", "Last Name", "Phone", "Email", "Address", "Are a Health-care Worker at risk for exposure?", "Do you live with/come into daily contact with vulnerable persons (Y/N)",
-"Age", "Do/Did you have any form of heart/lung disease? (Y/N)", "Do/Did you have any form of diabetes? (Y/N)", "Are you immunocompromised? (Y/N)", "Are you part of Vulnerable Groups (i.e. first nations, ...)? (Y/N)",
-"Have you ever had/have COVID-19? (Y/N)", "Are you pregnant? (Y/N)", "Please provide your postal code", "Submit"] // Prompt Questions
+var userPrompt = ["First Name", "What's your last name?", "What's your phone number?", "What's your email?", "What's your address?", "Are you an healthcare worker? (y/n)", "Are you an essential worker (y/n)",
+"Are you apart of a vulnerable group? (y/n)", "How old are you?", "Do you have any serious chronic illness? (y/n)", "Are you a part of the minority? (i.e. first nation) (y/n)",
+"Have you ever had/have COVID-19? (Y/N)", "Submit"] // Prompt Questions
 var currQuestion = 0; // Current question the user is on
 
 function nextQuestion(){
@@ -10,9 +10,10 @@ function nextQuestion(){
         userData.push(document.getElementById("input").value);
         currQuestion++;
         document.getElementById("prompt").innerHTML = userPrompt[currQuestion];
-        if(currQuestion != 15){
-            document.getElementById("counter").innerHTML = currQuestion + 1 + "/15";
+        if(currQuestion != 12){
+            document.getElementById("counter").innerHTML = currQuestion + 1 + "/12";
         } else {
+            document.getElementById("next").innerText = "Submit"
             document.getElementById("counter").style.display = "none";
             document.getElementById("input").style.display = "none";
 
@@ -20,7 +21,6 @@ function nextQuestion(){
         document.getElementById("input").value = "";
     } else {
         addDataToFirestore();
-        window.location.href = "home.html";
     }
 }
 

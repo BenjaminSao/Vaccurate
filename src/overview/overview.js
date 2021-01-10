@@ -13,16 +13,16 @@ clinicsRef.get().then(function(doc) {
             querySnapshot.forEach(function(doc) {
                 var list = document.createElement('ul');
                 var score = document.createElement('li');
-                score.appendChild(document.createTextNode("score: " + doc.data().score));
+                score.appendChild(document.createTextNode(doc.data().score));
                 list.appendChild(score);
                 var name = document.createElement('li');
-                name.appendChild(document.createTextNode("name: " + doc.data().first + " " + doc.data().last));
+                name.appendChild(document.createTextNode(doc.data().first + " " + doc.data().last));
                 list.appendChild(name);
                 var phone = document.createElement('li');
-                phone.appendChild(document.createTextNode("phone: " + doc.data().phone));
+                phone.appendChild(document.createTextNode(doc.data().phone));
                 list.appendChild(phone);
                 var email = document.createElement('li');
-                email.appendChild(document.createTextNode("email: " + doc.data().email));
+                email.appendChild(document.createTextNode(doc.data().email));
                 list.appendChild(email);
                 document.getElementById("list").appendChild(list);
             });
