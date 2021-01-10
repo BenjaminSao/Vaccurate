@@ -95,3 +95,36 @@ body, html {
     top: 205px;
     width: 304px;
 }
+
+.title {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.blurb {
+    position: absolute;
+    width: 80%;
+    top: 35%;
+    left: 15%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: left;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
