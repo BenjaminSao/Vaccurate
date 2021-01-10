@@ -6,6 +6,10 @@ body{
     background-color: #FF5959;
   }
 
+  .bg{
+    background-color: #FF5959;
+  }
+
 .title {
     margin-top: -180px;
     font-family: Montserrat;
@@ -78,9 +82,16 @@ body{
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-  
+
     text-align: center;
-  
+
     color: rgba(0, 0, 0, 0.5);
-  
+
+  }
+
+  /* //mobile changes */
+  @media (min-width: 0px) and (max-width: 768px) {
+    .title {
+        font-size: 42px;
+    }
   }

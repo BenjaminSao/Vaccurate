@@ -6,6 +6,9 @@ body{
     background-color: #FF5959;
   }
 
+.bg{
+  background-color: #FF5959;
+}
 .title {
     margin-top: -180px;
     font-family: Montserrat;
@@ -24,6 +27,8 @@ body{
     margin: 0px 53px;
     width: 300px;
     height: 91px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 
     border: 5px solid;
     box-sizing: border-box;
@@ -38,6 +43,10 @@ body{
     letter-spacing: 0.1em;
 
     transition-duration: 300ms;
+}
+
+.test{
+  border: 3px solid green;
 }
 
 .buttons:hover {
@@ -68,7 +77,7 @@ body{
 }
 
 .spacer{
-    height: 100px;
+    height: 20px;
 }
 
 .icon {
@@ -89,9 +98,16 @@ body{
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-  
+
     text-align: center;
-  
+
     color: rgba(0, 0, 0, 0.5);
-  
+
+  }
+
+  /* //mobile changes */
+  @media (min-width: 0px) and (max-width: 768px) {
+    .title {
+        font-size: 42px;
+    }
   }

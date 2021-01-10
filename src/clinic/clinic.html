@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../assets/favicon.ico" sizes="256x256">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinic Portal</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"/>
@@ -11,15 +12,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="container-fluid background" style="height: 100vh;">
+<body class="container-fluid background bg" style="height: 100vh;">
     <img src="../../assets/cornericon.png" class="icon" onclick="window.location.href='../../home.html'">
-    
+
     <div class="row d-flex justify-content-center" style="height:100vh">
         <div class="newcol align-self-center">
+          <div class="spacer"></div>
+          <div class="spacer"></div>
             <h1 class="title">CLINIC PORTAL</h1>
             <div class="spacer"></div>
-            <button class="buttons" id="login" onclick="redirectLoginPage();">LOGIN</button>
-            <button class="buttons" id="register" onclick="redirectRegistrationPage();">REGISTER</button>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="row ">
+              <div class="col-md align-self-center">
+                <div class="spacer"></div>
+                <button class="buttons test"  style="display: block; margin: 0 auto;" id="login" onclick="redirectLoginPage();">LOGIN</button>
+                <div class="spacer"></div>
+              </div>
+              <div class="col-md align-self-center">
+                <div class="spacer"></div>
+                <button class="buttons test" style="display: block; margin: 0 auto;" id="register" onclick="redirectRegistrationPage();">REGISTER</button>
+                <div class="spacer"></div>
+              </div>
+            </div>
         </div>
     </div>
 

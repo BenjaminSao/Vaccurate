@@ -6,19 +6,27 @@ body{
     background-color: #FF5959;
   }
 
-.title {
-    margin-top: -180px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 90px;
-    /* identical to box height */
-    text-align: center;
+  .bg{
+    background-color: #FF5959;
+  }
 
-    letter-spacing: 0.1em;
+  .title {
+      margin-top: -180px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 90px;
+      /* identical to box height */
+      text-align: center;
 
-    color: #FFFFFF;
-}
+      letter-spacing: 0.1em;
+
+      color: #FFFFFF;
+  }
+
+  .newcol{
+    width: 50%;
+  }
 
 .buttons {
     margin: 10px 50px;
@@ -57,7 +65,11 @@ body{
 }
 
 .spacer{
-    height: 8px;
+    height: 20px;
+}
+
+.spacerxl{
+  height: 100px;
 }
 
 .icon {
@@ -78,9 +90,9 @@ body{
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-  
+
     text-align: center;
-  
+
     color: rgba(0, 0, 0, 0.5);
   }
 
@@ -103,6 +115,7 @@ input:focus {
 }
 
 .input {
+    width: 100%;
     margin-left: 50px;
     margin-bottom: 25px;
     background: none;
@@ -115,4 +128,14 @@ input:focus {
     font-size: 20px;
     text-align: left;
     letter-spacing: 0.1em;
+}
+
+/* //mobile changes */
+@media (min-width: 0px) and (max-width: 768px) {
+  .title {
+      font-size: 42px;
+  }
+  .newcol{
+    width: 90%;
+  }
 }
