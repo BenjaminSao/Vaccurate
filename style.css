@@ -174,10 +174,10 @@ body{
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 6px;
-	left: 6px;
-	width: 12px;
-	height: 12px;
+ 	top: 7px;
+	left: 7px;
+	width: 10px;
+	height: 10px;
 	border-radius: 2px;
 	background: #FFA4A4;
 }
