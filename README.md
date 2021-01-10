@@ -29,6 +29,10 @@ For now, Vaccurate uses a simple, weighted scoring system in our Java based serv
 |Age: 56-65|0.7|
 |Age: 66-75|0.8|
 |Age: 75+|0.9|
-|Healthcare worker|1|
+|Healthcare worker|1.0|
 |Essential Worker|0.6|
-|Vulnerable Group|0.6|
+|Chronic Illness|0.65|
+|Vulnerable Group|0.8 - 1.0|
+|No Previous Covid|0.4|
+
+These numbers are just estimates and more accurate numbers should be calculated with help from an expert.
