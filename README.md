@@ -2,7 +2,7 @@
 A data service to help prioritize the distribution COVID-19 vaccine and reduce vaccine wastage.
 
 ## What is Vaccurate?
-![](/gif/vaccuratefinal.gif)
+![texct](/gif/vaccuratefinal.gif)
 # Questions asked
 • First Name
 • Last Name
