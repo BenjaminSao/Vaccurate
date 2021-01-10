@@ -10,10 +10,13 @@ var doses;
 
 clinicsRef.get().then(function(doc) {
     if (doc.exists) {
-        this.doses = doc.data().doses;
+        doses = doc.data().doses;
+        console.log(doses);
     } else {
         console.log("No such document!");
     }
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
+
+console.log(doses);
