@@ -73,11 +73,30 @@ body{
 }
 
 .icon {
-    position: absolute;
-    height: 34px;
-    width: 100px;
-    top: 24px;
-    left: 24px;
+  height: 100%;
+  width: 100%;
+}
+
+.iconbut{
+  position: absolute;
+  height: 34px;
+  width: 100px;
+  top: 24px;
+  left: 24px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  z-index: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 .note{
