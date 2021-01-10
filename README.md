@@ -1,6 +1,8 @@
 # Vaccurate
 A data service to help prioritize the distribution COVID-19 vaccine and reduce vaccine wastage.
 
+## What is Vaccurate?
+
 # Questions asked
 • First Name
 • Last Name
