@@ -6,7 +6,7 @@ A data service to help prioritize the distribution COVID-19 vaccine and reduce v
 ## What is Vaccurate?
 Vaccurate is a web application that aids in efficient distribution of the upcomming COVID-19 vaccine by determining who needs it most. Users who sign-up are asked to answer some questions about themselves, questions topics include occupation, health and lifestyle. Using the answers to the questions, the vaccurate server computes a score and attaches it to the user, the higher the score the higher the vaccine priority is for this individual. Nearby clinics can then use this score to determine who needs the vaccine first.
 
-# Questions asked
+## Questions asked
 These are the questions we asked in order to identify and calculate a score for a person. This can be updated to encompass a wider variety of situations and calculate a more accurate score.
 * Are a Health-care Worker at risk for exposure?
 * Do you live with/come into daily contact with vulnerable persons (Y/N)
@@ -16,3 +16,9 @@ These are the questions we asked in order to identify and calculate a score for 
 * Are you immunocompromised? (Y/N)
 * Are you part of Vulnerable Groups (i.e. first nations, ...)? (Y/N)
 * Have you ever had/have COVID-19? (Y/N)
+
+## Calculations
+For now, Vaccurate uses a simple, weighted scoring system in our Java based server. The server pulls user information form our Firestore database where all user responses are stored. Given the question responses the server caluculates the score of a user with these weights:
+
+|Question|Weight|
+|---|---|
