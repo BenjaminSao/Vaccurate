@@ -7,7 +7,7 @@ body{
 }
 
 .icon {
-  position: fixed;
+  position: absolute;
   height: 34px;
   width: 100px;
   top: 24px;

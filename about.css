@@ -13,11 +13,11 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #FF5959;
+    background-color: #FF4E4E;
   }
 
   .icon {
-    position: fixed;
+    position: absolute;
     height: 34px;
     width: 100px;
     top: 24px;
