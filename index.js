@@ -10,6 +10,13 @@ function nextQuestion(){
         userData.push(document.getElementById("input").value);
         currQuestion++;
         document.getElementById("prompt").innerHTML = userPrompt[currQuestion];
+        if(currQuestion != 15){
+            document.getElementById("counter").innerHTML = currQuestion + 1 + "/15";
+        } else {
+            document.getElementById("counter").style.display = "none";
+            document.getElementById("input").style.display = "none";
+
+        }
         document.getElementById("input").value = "";
     } else {
         addDataToFirestore();
