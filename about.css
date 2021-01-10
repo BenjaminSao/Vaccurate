@@ -1,14 +1,14 @@
 body, html {
     height: 100%;
   }
-  
+
   .bg {
     /* The image used */
-    background-image: url("Assets/home-background.png");
-  
+    background-image: url("Assets/background.png");
+
     /* Full height */
     height: 100%;
-  
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -88,15 +88,10 @@ img {
 
 
 .title {
-    position: absolute;
-    top: 25%;
-    left: 15%;
-
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    line-height: 24px;
     text-align: left;
     letter-spacing: 0.1em;
 
@@ -104,18 +99,27 @@ img {
 }
 
 .blurb {
-    position: absolute;
-    width: 80%;
-    top: 35%;
-    left: 15%;
-
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 37px;
+    font-size: 18px;
     text-align: left;
     letter-spacing: 0.1em;
 
     color: #FFFFFF;
+}
+
+.newcol{
+  width: 60%;
+}
+
+/* //mobile changes */
+@media (min-width: 0px) and (max-width: 768px) {
+  .newcol{
+    width: 90%;
+  }
+}
+
+.spacer{
+  height:20px;
 }
