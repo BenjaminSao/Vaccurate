@@ -40,7 +40,7 @@ function addDataToFirestore(){
         covid: userData[12],
         pregnant: userData[13],
         postal: userData[14],
-        time: Date.now()
+        time: Date.now() / 1000
     }).then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
     })
