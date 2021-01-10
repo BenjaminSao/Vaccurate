@@ -2,7 +2,7 @@ var db = firebase.firestore();
 var userData = []; // Data about the user
 var userPrompt = ["First Name", "What's your last name?", "What's your phone number?", "What's your email?", "What's your address?", "Are you an healthcare worker? (y/n)", "Are you an essential worker (y/n)",
 "Are you apart of a vulnerable group? (y/n)", "How old are you?", "Do you have any serious chronic illness? (y/n)", "Are you a part of the minority? (i.e. first nation) (y/n)",
-"Have you ever had/have COVID-19? (Y/N)", "Submit"] // Prompt Questions
+"Have you ever had/have COVID-19? (y/n)", "Submit"] // Prompt Questions
 var currQuestion = 0; // Current question the user is on
 
 function nextQuestion(){
