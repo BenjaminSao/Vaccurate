@@ -1,13 +1,16 @@
 package vaccurate;
 
 import java.util.Map;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class ScoreCalc {
 
     HashMap<String, Double> weights;
-    ArrayList<String> props;
+    List<String> props = Arrays.asList("age", "wwcv", "ess", 
+                            "vulnerableGroup", "sc", "mc", "fn", "covid");
 
     public ScoreCalc(Map<String, Object> weightMap) {
 
@@ -24,6 +27,19 @@ public class ScoreCalc {
 
         return parsed;
     }
+
+    private boolean verifyUserInfo(Map<String, Object> user){  
+
+
+        // Validate if proper information is availible
+        Set<String> userFields = user.keySet();
+
+        for (String prop : props) {
+            if (!userFields.contains(prop)) return false;
+        }
+
+        return true;
+    }   
 
     private double calcAgeScore(int age) {
 
@@ -53,13 +69,18 @@ public class ScoreCalc {
 
     public double calcScore(Map<String, Object> user) {
 
+        if (!verifyUserInfo(user)) {
+            System.out.println("Not enough information");
+            return -1.0;
+        }
+
         double score = 0;
 
         // Calculate score based on stored weights
         score += calcAgeScore(Integer.parseInt(user.get("age").toString()));
         if (user.get("wwcv").equals("y")) score += 1.0;
-        if (user.get("wrcv").equals("y")) score += 0.8;
-        if (user.get("dwcv").equals("y")) score += 0.5;
+        // if (user.get("wrcv").equals("y")) score += 0.8;
+        // if (user.get("dwcv").equals("y")) score += 0.5;
         if (user.get("ess").equals("y")) score += 0.6;
         if (user.get("vulnerableGroup").equals("y")) score += 0.8;
         if (user.get("sc").equals("y")) score += 0.65;

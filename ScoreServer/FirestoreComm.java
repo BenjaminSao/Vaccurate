@@ -1,13 +1,11 @@
 package vaccurate;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.cloud.FirestoreClient;
-import com.google.firestore.admin.v1.UpdateFieldRequest;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.api.core.ApiFuture;
@@ -15,7 +13,6 @@ import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.WriteResult;
-import com.google.common.collect.ImmutableMap;
 import com.google.cloud.firestore.DocumentReference;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +57,7 @@ public class FirestoreComm {
 
         try {
 
+            int count = 0;
             // Grab users created only after the last time pulled
             ApiFuture<QuerySnapshot> query = db.collection("users").whereGreaterThan("time", lastUpdated).get();
             QuerySnapshot querySnapshot = query.get();
@@ -67,11 +65,13 @@ public class FirestoreComm {
 
             // Grab each user, map database fields
             for (QueryDocumentSnapshot document : documents) {
-                System.out.println("A document");
                 Map<String, Object> userMap = document.getData();
                 userMap.put("ID", document.getId());
                 q.add(userMap);
+                count++;
             }
+
+            System.out.println(count + " new user(s) found.");
 
             // Update last updated time (UNIX time)
             DocumentReference docRef = db.collection("lastUpdated").document("lastUpdateUNIX");
@@ -122,33 +122,5 @@ public class FirestoreComm {
         }
 
     }
-
-    public static void main(String[] args) {
-
-        FirestoreComm firestore = new FirestoreComm();
-        System.out.println(firestore.lastUpdated);
-
-        HashMap<String, String> toSend = new HashMap<String, String>();
-
-        toSend.put("score", "5.7");
-        toSend.put("ID", "alovelace");
-
-        ConcurrentLinkedQueue<Map<String, Object>> q = new ConcurrentLinkedQueue<Map<String, Object>>();
-        ConcurrentLinkedQueue<HashMap<String, String>> q1 = new ConcurrentLinkedQueue<HashMap<String,String>>();
-        firestore.fillQueue(q);
-        Map<String, Object> user1 = q.poll();
-        Map<String, Object> user2 = q.poll();
-        System.out.println(user1.get("first"));
-        System.out.println(user2.get("first"));
-        toSend.put("ID", user2.get("ID").toString());
-        q1.add(toSend);
-        firestore.updateFirestoreScores(q1);
-
-        ScoreCalc calc = new ScoreCalc(firestore.getWeights());
-        System.out.println(calc.calcScore(user2));
-
-    }
-    
-
     
 }

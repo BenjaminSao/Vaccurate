@@ -27,7 +27,7 @@ public class Runner {
                 firestore.fillQueue(inQueue);
 
                 if (!inQueue.isEmpty()) {
-                    System.out.println("New users found, calculating scores...");
+                    System.out.println("New user(s) found, calculating scores...");
                     while (!inQueue.isEmpty()) {
                         Map<String, Object> user = inQueue.poll();
                         HashMap<String, String> scoreField = new HashMap<String, String>();
@@ -43,13 +43,13 @@ public class Runner {
                 }
 
                 if (!outQueue.isEmpty()) {
-                    System.out.println("New scores calculated, pushing to database...");
+                    System.out.println("New score(s) calculated, pushing to database...");
                     firestore.updateFirestoreScores(outQueue);
                 }
-                System.out.println("Process completed, next update in 10s");
+                System.out.println("Process completed, next update in 30s");
             }
         };
-        scheduler.scheduleAtFixedRate(process, 0, 10, SECONDS);
+        scheduler.scheduleAtFixedRate(process, 0, 30, SECONDS);
     }
 
     public static void main(String[] args) {
