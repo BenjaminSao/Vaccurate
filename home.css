@@ -1,0 +1,49 @@
+body {
+    background-image: url(assets/home-background.png);
+}
+
+.logo {
+    position: absolute;
+    width: 540px;
+    height: 183px;
+    left: 359.5px;
+    top: 20%;
+
+}
+
+.title {
+    position: absolute;
+    width: 1306px;
+    height: 219px;
+    text-align: center;
+    /* left: 67px;
+    top: 30%; */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 135px;
+    line-height: 219px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.description {
+    position: absolute;
+    width: 1306px;
+    height: 176px;
+    left: 67px;
+    top: 60%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 88px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
