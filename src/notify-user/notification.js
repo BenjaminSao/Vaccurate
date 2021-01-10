@@ -6,21 +6,21 @@ const MessagingResponse = require("twilio").twiml.MessagingResponse
 const bodyParser = require('body-parser');
 const client = require("twilio")(config.accountSid, config.authToken)
 
+const message = "\nYour COVID-19 vaccination dates have been confirmed:" +
+"\n\nYOURNAME\nFirst Dose: FIRSTDATE\nSecond Dose: SECONDDATE\nClinic Location: LOCATION" +
+"\n\nAre you able to attend both vaccination sessions? " +
+"Reply YES to confirm your attendence, or register again at Vaccurate www.something.com to modify your appointments."
  
 client.messages.create({
     to: config.phoneNumber1,
     from: config.twilioNumber,
-    body: "say YES"
-    // body: "\nYour COVID-19 vaccination dates have been confirmed:" +
-    // "\n\nYOURNAME\nFirst Dose: FIRSTDATE\nSecond Dose: SECONDDATE\nClinic Location: LOCATION" +
-    // "\n\nAre you able to attend both vaccination sessions? " +
-    // "Reply YES to confirm your attendence, or register again at Vaccurate www.something.com to modify your appointments."
+    body: message
 })
 
 client.messages.create({
     to: config.phoneNumber2,
     from: config.twilioNumber,
-    body: "say YES"
+    body: message
 })
 
 
