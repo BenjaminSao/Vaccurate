@@ -20,6 +20,7 @@ function nextQuestion(){
         document.getElementById("input").value = "";
     } else {
         addDataToFirestore();
+        window.location.href = "home.html";
     }
 }
 
